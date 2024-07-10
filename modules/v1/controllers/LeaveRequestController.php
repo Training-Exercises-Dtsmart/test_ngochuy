@@ -8,6 +8,7 @@ use app\modules\v1\models\form\LeaveRequestForm;
 use app\controllers\Controller;
 use app\modules\v1\models\LeaveRequest;
 use app\modules\v1\models\pagination\Pagination;
+use app\modules\v1\models\resource\UserResource;
 
 class LeaveRequestController extends Controller
 {
@@ -51,5 +52,24 @@ class LeaveRequestController extends Controller
         }
 
         return $this->json(true, ['data' => $leaveRequest], 'success', HttpStatus::OK);
+    }
+
+    public function actionCreateStaff()
+    {
+        if (!Yii::$app->user->identity->is_hr) {
+            return $this->json(false, [], 'You are not authorized to create staff', HttpStatus::UNAUTHORIZED);
+        }
+
+        $model = new UserResource();
+
+        if ($model->load(Yii::$app->request->post())) {
+            $model->setPassword($model->password_hash);
+            $model->generateAccessToken();
+            if ($model->save()) {
+                return $this->redirect(['index']);
+            }
+        }
+
+       return $this->json(true, ['data' => $model], 'Staff saved', HttpStatus::OK);
     }
 }
