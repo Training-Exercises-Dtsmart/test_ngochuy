@@ -11,3 +11,10 @@
 
 
 <img width="1046" alt="Ảnh màn hình 2024-07-10 lúc 17 27 15" src="https://github.com/Training-Exercises-Dtsmart/test_ngochuy/assets/145101998/acb63fda-ef86-436b-b203-b4e09df3fec5">
+
+
+-- Leave Request
+
+<img width="1062" alt="Ảnh màn hình 2024-07-10 lúc 17 27 25" src="https://github.com/Training-Exercises-Dtsmart/test_ngochuy/assets/145101998/c56de4fa-edfd-473e-94bc-1155937d8b85">
+
+<img width="1046" alt="Ảnh màn hình 2024-07-10 lúc 17 27 15" src="https://github.com/Training-Exercises-Dtsmart/test_ngochuy/assets/145101998/9cd2244a-3cfe-4a1d-9ddf-988b0b57da30">
